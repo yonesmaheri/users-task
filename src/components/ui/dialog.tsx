@@ -6,7 +6,6 @@ import { cn } from '@/lib/utils';
 
 const Dialog = DialogPrimitive.Root;
 const DialogClose = DialogPrimitive.Close;
-``;
 const DialogPortal = DialogPrimitive.Portal;
 const DialogTrigger = DialogPrimitive.Trigger;
 

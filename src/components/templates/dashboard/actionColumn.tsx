@@ -7,7 +7,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Delete, MoreHorizontal, UserPen } from "lucide-react";
+import { MoreHorizontal, UserPen } from "lucide-react";
 import React from "react";
 import Link from "next/link";
 import { DeleteUser } from "./deleteUser";

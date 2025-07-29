@@ -13,7 +13,6 @@ import { OctagonAlert, Trash2 } from "lucide-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useDeleteUser } from "@/services/users";
 import { ScaleLoader } from "react-spinners";
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import toast from "react-hot-toast";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";

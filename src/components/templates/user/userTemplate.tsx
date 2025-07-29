@@ -68,7 +68,7 @@ function UserTemplate({ id }: { id: string }) {
         email: userData.data.email || "",
       });
     }
-  }, [userData, form.reset, id]);
+  }, [userData, form.reset, id,form]);
 
   return (
     <div className="w-full mx-auto mt-6 p-4">

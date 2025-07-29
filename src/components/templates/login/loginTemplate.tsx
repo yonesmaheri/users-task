@@ -17,12 +17,12 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 function LoginTemplate() {
+  const router = useRouter();
   useEffect(() => {
     const loginState = localStorage?.getItem("login_state");
     if (loginState) router.push("/dashboard");
-  }, []);
+  }, [router]);
 
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -32,7 +32,7 @@ function LoginTemplate() {
     },
   });
 
-  const onSubmit = (data: LoginFormValues) => {
+  const onSubmit = () => {
     setLoading(true);
     setTimeout(() => {
       toast.success("با موفقیت وارد شدید");

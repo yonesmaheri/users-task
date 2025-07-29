@@ -16,7 +16,7 @@ export default function DashboardWrapper({ children }: { children: React.ReactNo
     } else {
       setAuthorized(true);
     }
-  }, []);
+  }, [router]);
 
   if (authorized === null) return null;
 

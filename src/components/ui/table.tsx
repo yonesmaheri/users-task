@@ -6,9 +6,8 @@ import { cn } from "@/lib/utils";
 
 function Table({
   className,
-  overflowHidden,
   ...props
-}: React.ComponentProps<"table"> & { overflowHidden?: boolean }) {
+}: React.ComponentProps<"table">) {
   return (
     <div
       data-slot="table-container"
