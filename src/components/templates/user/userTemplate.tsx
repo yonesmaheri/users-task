@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { updateUser } from "@/lib/features/userSlice";
+import Link from "next/link";
 
 type UserFormValues = {
   id: number;
@@ -68,10 +69,13 @@ function UserTemplate({ id }: { id: string }) {
         email: userData.data.email || "",
       });
     }
-  }, [userData, form.reset, id,form]);
+  }, [userData, form.reset, id, form]);
 
   return (
-    <div className="w-full mx-auto mt-6 p-4">
+    <div className="w-full mx-auto">
+      <Link href={"/dashboard"} className="">
+        <Button variant={"outline"}>بازگشت به صفحه قبل</Button>
+      </Link>
       {isFetching ? (
         <div className="w-full flex-col flex-center">
           <div>درحال دریافت اطلاعات</div>
@@ -87,7 +91,7 @@ function UserTemplate({ id }: { id: string }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center mb-6"
+            className="flex justify-center mb-6 mt-6"
           >
             <Avatar className="w-20 h-20">
               <AvatarImage
@@ -187,7 +191,7 @@ function UserTemplate({ id }: { id: string }) {
                 </motion.div>
               </div>
               <motion.div
-                className="flex flex-col sm:flex-row items-center justify-between mt-6"
+                className="flex flex-col gap-4 lg:flex-row items-center justify-between mt-6"
                 variants={{
                   hidden: { opacity: 0, y: 40 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },

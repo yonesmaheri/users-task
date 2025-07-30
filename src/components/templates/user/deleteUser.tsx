@@ -32,7 +32,7 @@ export function DeleteUser({ id, name }: Props) {
   return (
     <Dialog open={isOpen} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant={'outline'}>
+        <Button variant={'outline'} className="w-full sm:w-auto">
           <Trash2 size={20} color="#ff7b7b" />
           <span>حذف کاربر</span>
         </Button>

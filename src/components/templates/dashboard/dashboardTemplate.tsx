@@ -26,18 +26,18 @@ function DashboardTemplate() {
   }, [data, dispatch]);
 
   return (
-    <div dir="rtl">
+    <div dir="rtl" className="">
       {isError ? (
         <></>
       ) : (
         <div className="w-full flex flex-col gap-4 overflow-hidden">
           <motion.div
-            className="flex w-full items-center justify-between"
+            className="flex lg:flex-row flex-col w-full lg:items-center lg:justify-between"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <div className="mt-3 flex items-center gap-2 text-sm text-zinc-400">
+            <div className="mt-3 flex items-start lg:items-center gap-2 text-sm text-zinc-400">
               <span className="rounded bg-blue-400 px-2 py-1 text-white">
                 راهنما
               </span>
